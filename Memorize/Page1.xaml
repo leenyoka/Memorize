@@ -1,0 +1,108 @@
+﻿<phone:PhoneApplicationPage xmlns:my="clr-namespace:Memorize"  
+    x:Class="Memorize.Page1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="Memorize Keys" Style="{StaticResource PhoneTextNormalStyle}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid Margin="0,0,0,414">
+                <Button Content="1" Height="160" HorizontalAlignment="Left" Margin="31,63,0,0" Name="btnHitCount" VerticalAlignment="Top" Width="160" BorderThickness="0" FontSize="72" FontFamily="Arial" />
+                <Button Content="00:00" Height="72" HorizontalAlignment="Left" Margin="257,107,0,0" Name="btnTime" VerticalAlignment="Top" Width="160" BorderThickness="0" />
+                <Image Height="96" HorizontalAlignment="Left" Margin="293,23,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="102" Source="/Memorize;component/Images/Time.jpg" />
+                <Button Height="96" HorizontalAlignment="Left" Margin="63,169,0,0" Name="YourTurn"
+                        Content="Your turn" VerticalAlignment="Top" Width="299" 
+                        FontSize="40" Visibility="Collapsed" BorderThickness="0" Foreground="#FFEB0909">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Memorize;component/Images/turn.png" Stretch="UniformToFill" />
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </Grid>
+        
+        <Grid Margin="12,288,12,12" Grid.Row="1" Width="444" Height="400" Name="Keys">
+            <my:Key Width="88" Margin="-350,0,0,0" Number="5">
+                <my:Key.Background>
+                    <ImageBrush ImageSource="/Memorize;component/Images/One.png" Stretch="Fill" />
+                </my:Key.Background>
+            </my:Key>
+            <my:Key Width="88" Margin="-180,0,0,0" Number="6">
+                <my:Key.Background>
+                    <ImageBrush ImageSource="/Memorize;component/Images/One.png" Stretch="Fill" />
+                </my:Key.Background>
+            </my:Key>
+            <my:Key Width="88" Margin="-10,0,0,0" Number="7">
+                <my:Key.Background>
+                    <ImageBrush ImageSource="/Memorize;component/Images/One.png" Stretch="Fill" />
+                </my:Key.Background>
+            </my:Key>
+            <my:Key Width="88" Margin="160,0,0,0" Number="8">
+                <my:Key.Background>
+                    <ImageBrush ImageSource="/Memorize;component/Images/One.png" />
+                </my:Key.Background>
+            </my:Key>
+            <my:Key Width="88" Margin="330,0,0,0" Number="9">
+                <my:Key.Background>
+                    <ImageBrush ImageSource="/Memorize;component/Images/One.png" />
+                </my:Key.Background>
+            </my:Key>
+            
+            
+            
+            <my:Key Width="60" Height="200" Margin="-270,-190,0,0" Number="1">
+                <my:Key.Background>
+                    <ImageBrush ImageSource="/Memorize;component/Images/Two.png" Stretch="Fill" />
+                </my:Key.Background>
+            </my:Key>
+            <my:Key Width="60" Height="200" Margin="-100,-190,0,0" Number="2">
+                <my:Key.Background>
+                    <ImageBrush ImageSource="/Memorize;component/Images/Two.png" />
+                </my:Key.Background>
+            </my:Key>
+            <my:Key Width="60" Height="200" Margin="70,-190,0,0" Number="3">
+                <my:Key.Background>
+                    <ImageBrush ImageSource="/Memorize;component/Images/Two.png" />
+                </my:Key.Background>
+            </my:Key>
+            <my:Key Width="60" Height="200" Margin="240,-190,0,0" Number="4">
+                <my:Key.Background>
+                    <ImageBrush ImageSource="/Memorize;component/Images/Two.png" />
+                </my:Key.Background>
+            </my:Key>
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
